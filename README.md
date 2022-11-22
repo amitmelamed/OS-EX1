@@ -2,9 +2,10 @@
 # OS-EX1
 First Execise in OS Curse at Ariel University.<br />
 
-How to run the script
+How to run the script:   
+```
 ./myScript.sh
-
+```
 Q1<br />
 :Write a compare file program. Use FILE * API to read and compare the files.<br />
 <Usage : cmp <file1> <file2<br />
