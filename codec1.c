@@ -8,10 +8,14 @@
 
 int encode(char * src, char * dst, int len)
 {
+    printf("DL:Codec 1 \n"
+           "Function: endoce");
     return 0;
 }
 
 int decode(char * src, char * dst, int len)
 {
+    printf("DL:Codec 1 \n"
+           "Function: decode");
     return 1;
 }

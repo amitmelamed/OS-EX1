@@ -16,14 +16,15 @@ int main(int argc, char** argv)
     //Declaring the error output
     char* error;
 
-    char* adress = malloc(sizeof(char) *(3 + strlen(argv[1]) +3 +1) );
-    strcat(adress , "lib");
-    strcat(adress , argv[1]);
-    strcat(adress , ".so");
+    char* DL_Address = malloc(sizeof(char) *(8 + strlen(argv[1])) );
+    strcat(DL_Address , "./lib");
+    strcat(DL_Address , argv[1]);
+    strcat(DL_Address , ".so");
 
+    //./libcodec1.so
 
     //Open the Dynamic Library with dlopen
-    void *dl = dlopen(adress, RTLD_NOW);
+    void *dl = dlopen(DL_Address, RTLD_NOW);
     if (dl==NULL) {
         fprintf(stderr, "ERROR: %s\n", dlerror());
         exit(1);
@@ -40,6 +41,7 @@ int main(int argc, char** argv)
 
     //Using the function
     int ans = (*encode)("a","b",0);
+
 
     return 0;
 }
