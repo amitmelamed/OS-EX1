@@ -9,6 +9,10 @@ git clone https://github.com/amitmelamed/OS-EX1
 cd os-EX1
 ./myScript.sh
 ```
+
+used link:
+https://www.geeksforgeeks.org/c-program-copy-contents-one-file-another-file/
+
 Q1<br />
 :Write a compare file program. Use FILE * API to read and compare the files.<br />
 <Usage : cmp <file1> <file2<br />
