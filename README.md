@@ -2,7 +2,8 @@
 # OS-EX1
 First Execise in OS Curse at Ariel University.<br />
 
-How to run the script (the script tests all the functions of this assignemnt-[click here to see the script](https://github.com/amitmelamed/OS-EX1/blob/main/myScript.sh) : 
+## How to run the script ->  
+the script tests all the functions of this assignemnt -[click here to see the script](https://github.com/amitmelamed/OS-EX1/blob/main/myScript.sh)
 ```
 git clone https://github.com/amitmelamed/OS-EX1
 cd os-EX1
