@@ -38,9 +38,18 @@ int main(int argc, char** argv)
         exit(1);
     }
 
+    //Allocating memory for dest
+    char* dest = malloc(sizeof(char) *(strlen(argv[2])+1));
     //Using the function
-    int ans = (*decode)("a","b",0);
+    int ans = (*decode)(argv[2],dest, strlen(argv[2]));
 
+
+    if(dlclose(dl) != 0)
+    {
+        printf("Error closing DL");
+    }
+    free(DL_Address);
+    free(dest);
 
     return 0;
 }

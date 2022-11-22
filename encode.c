@@ -21,7 +21,7 @@ int main(int argc, char** argv)
     strcat(DL_Address , argv[1]);
     strcat(DL_Address , ".so");
 
-    //./libcodec1.so
+
 
     //Open the Dynamic Library with dlopen
     void *dl = dlopen(DL_Address, RTLD_NOW);
@@ -39,9 +39,21 @@ int main(int argc, char** argv)
         exit(1);
     }
 
+    //allocating memory for the answer
+    char* dest = malloc(sizeof(char) *(strlen(argv[2])+1));
     //Using the function
-    int ans = (*encode)("a","b",0);
+    int ans = (*encode)(argv[2],dest,strlen(argv[2]));
 
+
+
+    //Closing Dynamic Library
+    if(dlclose(dl) != 0)
+    {
+        printf("Error closing DL");
+    }
+    //Free allocate memory
+    free(DL_Address);
+    free(dest);
 
     return 0;
 }
