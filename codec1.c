@@ -31,10 +31,11 @@ int encode(char * src, char * dst, int len)
         }
         count ++;
     }
-    printf("DL:Codec 1 \n"
-           "Function: endoce\n"
-           "Source: %s\n"
-           "Destination %s",src,dst);
+    // printf("DL:Codec 1 \n"
+    //        "Function: endoce\n"
+    //        "Source: %s\n"
+    //        "Destination %s",src,dst);
+    printf("encoded %s\n", dst);
     return 0;
 }
 
@@ -64,9 +65,10 @@ int decode(char * src, char * dst, int len)
         count++;
 
     }
-    printf("DL:Codec 1 \n"
-           "Function: decode\n"
-           "Source: %s\n"
-           "Destination %s",src,dst);
+    // printf("DL:Codec 1 \n"
+    //        "Function: decode\n"
+    //        "Source: %s\n"
+    //        "Destination %s\n",src,dst);
+    printf("decoded %s\n", dst);
     return 1;
 }

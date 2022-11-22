@@ -3,8 +3,8 @@
 //
 
 #include <stdio.h>
-#include<string.h>
-#include<stdlib.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * How to run the file->
@@ -22,7 +22,6 @@
  * Source of information
  * https://www.geeksforgeeks.org/c-program-compare-two-files-report-mismatches/
  */
-
 
 void compareFiles(FILE *fp1, FILE *fp2)
 {
@@ -55,7 +54,6 @@ void compareFiles(FILE *fp1, FILE *fp2)
         if (ch1 != ch2)
         {
             error++;
-
         }
 
         // fetching character until end of file
@@ -63,27 +61,28 @@ void compareFiles(FILE *fp1, FILE *fp2)
         ch2 = getc(fp2);
     }
 
-
-
-    if(error == 0 && ch1 == EOF && ch2 == EOF)
+    if (error == 0 && ch1 == EOF && ch2 == EOF)
     {
-        printf("Identical\t");
-    } else
+        printf("Identical\n");
+    }
+    else
     {
-        printf("Not Identical\t");
+        printf("Not Identical\n");
     }
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     FILE *file1 = fopen(argv[1], "r");
     FILE *file2 = fopen(argv[2], "r");
-    if (!file1 || !file2 ){
-        printf("Error");
+    if (!file1 || !file2)
+    {
+        printf("Usage : cmp <file1> <file2>\n");
         exit(0);
     }
 
-    compareFiles(file1,file2);
+    compareFiles(file1, file2);
 
-    fclose (file1), fclose (file2);
+    fclose(file1), fclose(file2);
     return 0;
 }

@@ -21,8 +21,8 @@ decode: lib decode.c
 	gcc decode.c -ldl -o decode
 	export LD_LIBRARY_PATH=.
 lib: codec1.c codec2.c codec.h
-	gcc -Wall -o libcodec1.so -shared -fPIC codec1.c
-	gcc -Wall -o libcodec2.so -shared -fPIC codec2.c
+	gcc  -Wall -o libcodec1.so -shared -fPIC codec1.c
+	gcc  -Wall -o libcodec2.so -shared -fPIC codec2.c
 
 
 clean:
